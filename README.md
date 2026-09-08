@@ -6,6 +6,8 @@ Medication records delivered by FinchNode. [Explore FinchNode](https://finchnode
 
 ## What this app does
 
+Search medications, mark entries reviewed in the current session, inspect source directions and allergies, and export the review.
+
 A standalone, responsive application for exploring a fixed **fictional** patient record. It calls FinchNode's live public synthetic API directly from your browser. Every clinical value comes from the API; there is no invented patient history, treatment advice, or real patient connection.
 
 ## Run locally
@@ -48,3 +50,7 @@ Semantic headings, labeled controls, keyboard focus, visible loading/error feedb
 ## License
 
 MIT. FinchNode and source-system names belong to their respective owners. This is an independent demonstration, not a claim of endorsement.
+
+## Optional domain
+
+`dosefolio.com` was unregistered in the .com registry on 2026-09-08. This is an availability signal, not a reservation; verify the registrar offer before purchasing. No domain has been bought.
