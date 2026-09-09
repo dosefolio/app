@@ -158,6 +158,86 @@
           "url": "https://github.com/dosefolio/app/blob/main/app/view.tsx"
         }
       ]
+    },
+    {
+      "slug": "why-medication-startups-need-patient-data",
+      "title": "Why medication startups need patient data before adding AI",
+      "description": "Explore how authorized medication data can support useful AI features, and why source directions, status and review context matter before model selection.",
+      "published": "2026-09-09",
+      "theme": "data-ai",
+      "sections": [
+        {
+          "heading": "A medication name is only the beginning",
+          "paragraphs": [
+            "A startup can demonstrate a polished medication interface with a list of names. The harder product problem appears when a visitor wants to review their own record: directions may be missing, similar labels may occur more than once, and the source’s active status may differ from what the visitor expects. A generic model cannot resolve those questions by guessing the missing context.",
+            "Useful patient data supplies the material a product needs to keep those distinctions visible. For DoseFolio, that means recorded medication entries and the allergy information returned alongside them, with a separate place for temporary review progress."
+          ]
+        },
+        {
+          "heading": "Where AI could help a review workflow",
+          "paragraphs": [
+            "A carefully evaluated AI feature could draft questions for a review conversation, make a long recorded instruction easier to navigate, or point a reader to the source text supporting a summary. The value would be reducing the effort of finding and organizing information while keeping the original entry accessible.",
+            "Those are possible extensions, not capabilities currently shipped in DoseFolio. WHO identifies potential uses for generative AI in healthcare, including documentation and summarization, while also describing the risk of inaccurate or incomplete outputs. A product should be tested against the particular task it claims to support."
+          ],
+          "links": [
+            {
+              "label": "WHO on potential uses and risks of generative AI in health",
+              "url": "https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models"
+            }
+          ]
+        },
+        {
+          "heading": "Choose the data contract before the prompt",
+          "paragraphs": [
+            "Define which fields a proposed feature needs, how missing values remain visible and how a person can verify the output. An AI-generated review note should not silently turn an imported medication order into confirmation of current use. Nor should a session checkbox be treated as a clinical approval."
+          ],
+          "items": [
+            "Keep source directions separate from generated wording.",
+            "Show which entry supports each generated statement.",
+            "Use explicit missing-data states instead of guessed instructions.",
+            "Measure omissions and unsupported additions, not only writing fluency."
+          ]
+        },
+        {
+          "heading": "Why this site uses FinchNode",
+          "paragraphs": [
+            "DoseFolio uses FinchNode in its implemented connection path to obtain authorized medication and allergy categories through a server. The product then supplies its own search, checklist and text export. This creates a defined upstream boundary against which a future feature could be tested.",
+            "The connection is not permission to send records to an arbitrary model or use them for training. A future AI feature would need an appropriate purpose, data-handling decisions and evaluation. The current app does not send patient records to an AI service, and live imports remain pending operator activation."
+          ],
+          "links": [
+            {
+              "label": "DoseFolio’s medication review code",
+              "url": "https://github.com/dosefolio/app/blob/main/app/view.tsx"
+            },
+            {
+              "label": "FinchNode connection contract",
+              "url": "https://finchnode.com/openapi.yaml"
+            }
+          ]
+        },
+        {
+          "heading": "Start with a useful non-AI baseline",
+          "paragraphs": [
+            "A startup should be able to explain what improvement a model adds over a clear list and a reliable search box. DoseFolio’s baseline already distinguishes source status from review state. That makes a future evaluation concrete: does an added feature help users inspect the same evidence with fewer errors, or merely add more text?"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does DoseFolio currently use AI to analyze medications?",
+          "answer": "No. Its present workflow uses search, display logic and temporary review flags. The AI ideas in this article describe possible future features."
+        },
+        {
+          "question": "Does access to records authorize model training?",
+          "answer": "The implemented connection authorizes a specific application workflow. It should not be treated as blanket permission for unrelated model training or third-party disclosure."
+        }
+      ],
+      "references": [
+        {
+          "label": "DoseFolio public source repository",
+          "url": "https://github.com/dosefolio/app"
+        }
+      ]
     }
   ]
 }

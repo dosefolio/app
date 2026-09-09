@@ -78,3 +78,5 @@ Explore medication-list review, the meaning of source status, and the difference
 
 - [How to review a medication list in DoseFolio](https://dosefolio.com/guides/review-a-medication-list.html) — Search recorded medications, compare source directions and export your review progress without changing prescriptions or source status.
 - [Medication review flags are different from source status](https://dosefolio.com/guides/review-flags-and-source-status.html) — Understand why DoseFolio keeps “reviewed this session” separate from an imported medication’s active status and recorded directions.
+
+- [Why medication startups need patient data before adding AI](https://dosefolio.com/guides/why-medication-startups-need-patient-data.html) — Explore how authorized medication data can support useful AI features, and why source directions, status and review context matter before model selection.
