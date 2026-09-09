@@ -32,7 +32,7 @@
     ],
     [
       "The system behind the review",
-      "The frontend is a React application served as static files. Its connection requests go to a separate Node service, which uses FinchNode Hosted Connect and the production API. That server keeps the API key outside the browser and ties a temporary session to this site\u2019s origin. DoseFolio receives the categories authorized for that session rather than a browser credential that could query arbitrary patients."
+      "The frontend is a React application served as static files. Its connection requests go to a separate Node service, which uses FinchNode Hosted Connect and the production API. That server keeps the API key outside the browser and ties a temporary session to this site’s origin. DoseFolio receives the categories authorized for that session rather than a browser credential that could query arbitrary patients."
     ],
     [
       "Directions stay with their source",
@@ -40,7 +40,7 @@
     ],
     [
       "Review state is deliberately temporary",
-      "Review marks belong to the current interface session. They are not sent back to a medical record and should not be treated as an adherence history. An exported review is a separate file under the visitor\u2019s control. Ending the connection removes access here, but does not erase a file already downloaded. This distinction is part of the workflow, not an extra promise about clinical accuracy."
+      "Review marks belong to the current interface session. They are not sent back to a medical record and should not be treated as an adherence history. An exported review is a separate file under the visitor’s control. Ending the connection removes access here, but does not erase a file already downloaded. This distinction is part of the workflow, not an extra promise about clinical accuracy."
     ],
     [
       "Current integration status",
@@ -51,5 +51,113 @@
     "FinchNode API contract",
     "https://finchnode.com/openapi.yaml"
   ],
-  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk"
+  "googleVerification": "TMdY5YFKPrSoVv3fC5iyCopvPVAm9JPLyi2OVYoBrOk",
+  "guideIntro": "Explore medication-list review, the meaning of source status, and the difference between a temporary review checklist and an authorized clinical record.",
+  "finchnodeContext": "DoseFolio receives medication and allergy information through FinchNode, then adds its own temporary review checklist. A checked box records progress in this interface; it does not certify a medication list or update a prescription.",
+  "articles": [
+    {
+      "slug": "review-a-medication-list",
+      "title": "How to review a medication list in DoseFolio",
+      "description": "Search recorded medications, compare source directions and export your review progress without changing prescriptions or source status.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "Read the three counters correctly",
+          "paragraphs": [
+            "DoseFolio distinguishes the number of recorded medications, entries marked active by the source, and entries reviewed during the current session. Those counts answer different questions. A source status is part of the imported record; the reviewed count reflects clicks in this workspace."
+          ]
+        },
+        {
+          "heading": "Find and inspect an entry",
+          "paragraphs": [
+            "Use “Find a medication” to filter by the displayed medication label. Clear the search when you want to see the full list again. Read the directions and frequency supplied with an entry. A missing instruction is shown as missing, rather than replaced with a guessed dose."
+          ],
+          "items": [
+            "Compare the label with the entry you meant to inspect.",
+            "Read the recorded directions and the displayed source context.",
+            "Mark the entry reviewed only after reading it.",
+            "Keep unresolved questions for a pharmacist or clinician."
+          ]
+        },
+        {
+          "heading": "Know what the export includes",
+          "paragraphs": [
+            "The text export includes the full imported medication list, each entry’s review flag, and its supplied dosage text or a missing-directions label. A search filter does not restrict the exported list. The file is a personal review aid; it is not a new prescription or a clinically reconciled medication list."
+          ]
+        },
+        {
+          "heading": "Use the checklist within its limits",
+          "paragraphs": [
+            "DoseFolio displays allergies from the same authorized response for reference. It does not calculate drug interactions or advise changes to treatment. Review flags are temporary and do not write back to the source. The connected workflow remains subject to production activation."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does searching change which medications are exported?",
+          "answer": "No. DoseFolio’s review export uses the complete returned medication list, with review flags, even when the screen is filtered."
+        },
+        {
+          "question": "Does “reviewed” mean safe to take?",
+          "answer": "No. It means you checked that entry in this session. The app does not assess medication safety."
+        }
+      ],
+      "references": [
+        {
+          "label": "DoseFolio interface implementation",
+          "url": "https://github.com/dosefolio/app/blob/main/app/view.tsx"
+        }
+      ]
+    },
+    {
+      "slug": "review-flags-and-source-status",
+      "title": "Medication review flags are different from source status",
+      "description": "Understand why DoseFolio keeps “reviewed this session” separate from an imported medication’s active status and recorded directions.",
+      "published": "2026-09-09",
+      "sections": [
+        {
+          "heading": "A status field belongs to its source",
+          "paragraphs": [
+            "The active count reads the status supplied with each medication. DoseFolio does not infer current use from the age of an entry, its appearance in the list, or the presence of directions. If the record raises a question about current treatment, the interface gives you an entry to discuss rather than an answer to assume."
+          ]
+        },
+        {
+          "heading": "A review flag belongs to this visit to the app",
+          "paragraphs": [
+            "Checking an entry stores its ID in the interface’s review state. It does not alter the medication object. This separation lets the same recorded information support different personal review sessions without silently turning a checklist action into a clinical edit."
+          ]
+        },
+        {
+          "heading": "The export preserves the distinction",
+          "paragraphs": [
+            "Each exported line says whether the entry was reviewed in this session. The review label accompanies the medication text; it does not replace the source’s status. Someone reading the file should treat it as a record of your review activity, with any unanswered questions handled separately."
+          ]
+        },
+        {
+          "heading": "What an operator can extend",
+          "paragraphs": [
+            "A business extending DoseFolio could add a note field or improve how discrepancies are displayed. Such additions should state whether they are local annotations or updates to another system. The implemented service is read-only, and patient imports are awaiting activation."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can the checklist change a medication from active to inactive?",
+          "answer": "No. The interface keeps review progress separate from the imported status field."
+        }
+      ],
+      "finchnode": {
+        "heading": "FinchNode carries the record; DoseFolio tracks the review",
+        "text": "The medication and allergy categories in this implementation arrive through FinchNode. DoseFolio’s contribution is the review experience layered on that response. Keeping the two kinds of state distinct makes it possible to explain exactly what a checked box means.",
+        "label": "FinchNode’s record API overview",
+        "url": "https://finchnode.com/ehr-integration-api"
+      },
+      "references": [
+        {
+          "label": "DoseFolio interface implementation",
+          "url": "https://github.com/dosefolio/app/blob/main/app/view.tsx"
+        }
+      ]
+    }
+  ]
 }

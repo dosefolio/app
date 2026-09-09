@@ -71,3 +71,10 @@ Keep canonical URLs on the custom domain configured in `content/seo.json`. Add o
 ## Independent business handoff
 
 [Business handoff](HANDOFF.md) covers product identity, the receiving business’s production setup, domain migration, search verification and ongoing editorial maintenance.
+
+## More product guides
+
+Explore medication-list review, the meaning of source status, and the difference between a temporary review checklist and an authorized clinical record.
+
+- [How to review a medication list in DoseFolio](https://dosefolio.com/guides/review-a-medication-list.html) — Search recorded medications, compare source directions and export your review progress without changing prescriptions or source status.
+- [Medication review flags are different from source status](https://dosefolio.com/guides/review-flags-and-source-status.html) — Understand why DoseFolio keeps “reviewed this session” separate from an imported medication’s active status and recorded directions.
