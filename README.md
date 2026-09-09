@@ -2,7 +2,7 @@
 
 Review medication names and source directions, search your imported list, and export a personal review with DoseFolio. No dose tracking or interaction advice.
 
-**Site:** https://dosefolio.onrender.com/  
+**Site:** https://dosefolio.com/
 **Repository:** https://github.com/dosefolio/app
 
 ## Production integration
@@ -45,20 +45,20 @@ CSP `connect-src` must allow only `https://finchapps-connect.onrender.com`. Depl
 
 ## Privacy and verification
 
-Read [the data-handling notice](https://dosefolio.onrender.com/privacy.html). No clinical record is saved in browser storage; visible data is held in memory, cleared on hiding the page, and periodically revalidated. No browser agent tools expose medical data. Unit tests validate production envelopes and preserve source values. Backend tests cover origin/session isolation, scope checks, invalid environments, expiration and signed revocation without using real medical data.
+Read [the data-handling notice](https://dosefolio.com/privacy.html). No clinical record is saved in browser storage; visible data is held in memory, cleared on hiding the page, and periodically revalidated. No browser agent tools expose medical data. Unit tests validate production envelopes and preserve source values. Backend tests cover origin/session isolation, scope checks, invalid environments, expiration and signed revocation without using real medical data.
 
 A real patient must perform their own EHR authentication and consent; these tests do not claim successful patient connectivity. Availability varies by healthcare organization.
 
-## Domain candidate
+## Custom domain
 
-`dosefolio.com` was available on September 8, 2026; Porkbun displayed $11.08 for initial registration and renewal. No domain was purchased. Availability and price can change. Add it to Render and the backend's explicit origin allowlist before use.
+`dosefolio.com` is registered through Squarespace and assigned to this Render site. DNS uses an apex A record pointing to `216.24.57.1` and a `www` CNAME pointing to `dosefolio.onrender.com`. Render redirects `www` to the apex domain and manages HTTPS certificates.
 
 <!-- public-discovery -->
 ## Public guide and project context
 
-[How we built a medication review desk](https://dosefolio.onrender.com/guides/how-we-built-medication-review.html) — Why DoseFolio separates finding a medication, reading its directions, and marking an entry reviewed.
+[How we built a medication review desk](https://dosefolio.com/guides/how-we-built-medication-review.html) — Why DoseFolio separates finding a medication, reading its directions, and marking an entry reviewed.
 
-[Search DoseFolio guides](https://dosefolio.onrender.com/guides/) · [About the site](https://dosefolio.onrender.com/about.html) · [Sitemap](https://dosefolio.onrender.com/sitemap.xml)
+[Search DoseFolio guides](https://dosefolio.com/guides/) · [About the site](https://dosefolio.com/about.html) · [Sitemap](https://dosefolio.com/sitemap.xml)
 
 DoseFolio is a standalone product with its own interface, documentation and repository, prepared for independent business operation and continued development. Its FinchNode integration is documented in the code. Live production activation remains pending.
 
@@ -66,7 +66,7 @@ DoseFolio is a standalone product with its own interface, documentation and repo
 
 Edit `content/seo.json` for reviewed article text and site metadata. `npm run build` generates public HTML pages, a sitemap, social metadata and structured data, then prerenders the actual React homepage. `npm run test:seo` checks the built crawl surface after a build. Public guide search filters only public text in the browser; no patient data or search analytics enter the index.
 
-Keep canonical URLs on the deployed origin until a custom domain is registered and configured. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
+Keep canonical URLs on the custom domain configured in `content/seo.json`. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
 
 ## Independent business handoff
 

@@ -10,7 +10,7 @@
   "repositoryStatus": "public",
   "renderStatus": "live",
   "repository": "https://github.com/dosefolio/app",
-  "liveUrl": "https://dosefolio.onrender.com/",
+  "liveUrl": "https://dosefolio.com/",
   "homepage": "individually designed full website",
   "importRoute": "/#/import",
   "subject": "Medication list review & export",
@@ -32,7 +32,7 @@
     ],
     [
       "The system behind the review",
-      "The frontend is a React application served as static files. Its connection requests go to a separate Node service, which uses FinchNode Hosted Connect and the production API. That server keeps the API key outside the browser and ties a temporary session to this site’s origin. DoseFolio receives the categories authorized for that session rather than a browser credential that could query arbitrary patients."
+      "The frontend is a React application served as static files. Its connection requests go to a separate Node service, which uses FinchNode Hosted Connect and the production API. That server keeps the API key outside the browser and ties a temporary session to this site\u2019s origin. DoseFolio receives the categories authorized for that session rather than a browser credential that could query arbitrary patients."
     ],
     [
       "Directions stay with their source",
@@ -40,7 +40,7 @@
     ],
     [
       "Review state is deliberately temporary",
-      "Review marks belong to the current interface session. They are not sent back to a medical record and should not be treated as an adherence history. An exported review is a separate file under the visitor’s control. Ending the connection removes access here, but does not erase a file already downloaded. This distinction is part of the workflow, not an extra promise about clinical accuracy."
+      "Review marks belong to the current interface session. They are not sent back to a medical record and should not be treated as an adherence history. An exported review is a separate file under the visitor\u2019s control. Ending the connection removes access here, but does not erase a file already downloaded. This distinction is part of the workflow, not an extra promise about clinical accuracy."
     ],
     [
       "Current integration status",
