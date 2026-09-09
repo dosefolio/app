@@ -1,6 +1,6 @@
-# DoseFolio
+# DoseFolio — Medication list review & export
 
-A clearer view of the medication record. Medication records delivered by FinchNode.
+Review medication names and source directions, search your imported list, and export a personal review with DoseFolio. No dose tracking or interaction advice.
 
 **Site:** https://dosefolio.onrender.com/  
 **Repository:** https://github.com/dosefolio/app
@@ -52,3 +52,22 @@ A real patient must perform their own EHR authentication and consent; these test
 ## Domain candidate
 
 `dosefolio.com` was available on September 8, 2026; Porkbun displayed $11.08 for initial registration and renewal. No domain was purchased. Availability and price can change. Add it to Render and the backend's explicit origin allowlist before use.
+
+<!-- public-discovery -->
+## Public guide and project context
+
+[How we built a medication review desk](https://dosefolio.onrender.com/guides/how-we-built-medication-review.html) — Why DoseFolio separates finding a medication, reading its directions, and marking an entry reviewed.
+
+[Search DoseFolio guides](https://dosefolio.onrender.com/guides/) · [About the site](https://dosefolio.onrender.com/about.html) · [Sitemap](https://dosefolio.onrender.com/sitemap.xml)
+
+DoseFolio is a standalone product with its own interface, documentation and repository, prepared for independent business operation and continued development. Its FinchNode integration is documented in the code. Live production activation remains pending.
+
+## Public-page build and discoverability
+
+Edit `content/seo.json` for reviewed article text and site metadata. `npm run build` generates public HTML pages, a sitemap, social metadata and structured data, then prerenders the actual React homepage. `npm run test:seo` checks the built crawl surface after a build. Public guide search filters only public text in the browser; no patient data or search analytics enter the index.
+
+Keep canonical URLs on the deployed origin until a custom domain is registered and configured. Add only public, canonical pages to the sitemap. Validate links, mobile layout and the built HTML after editorial changes. Search engine indexing and rich results are not guaranteed.
+
+## Independent business handoff
+
+[Business handoff](HANDOFF.md) covers product identity, the receiving business’s production setup, domain migration, search verification and ongoing editorial maintenance.

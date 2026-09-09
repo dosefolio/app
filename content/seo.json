@@ -1,0 +1,54 @@
+{
+  "slug": "dosefolio",
+  "title": "DoseFolio",
+  "description": "Review medication names and source directions, search your imported list, and export a personal review with DoseFolio. No dose tracking or interaction advice.",
+  "attribution": "Medication records delivered by FinchNode.",
+  "domain": "dosefolio.com",
+  "purpose": "Medication review",
+  "theme": "Cobalt review workspace",
+  "workflow": "Search medications, mark entries reviewed in the current session, inspect source directions and allergies, and export the review.",
+  "repositoryStatus": "public",
+  "renderStatus": "live",
+  "repository": "https://github.com/dosefolio/app",
+  "liveUrl": "https://dosefolio.onrender.com/",
+  "homepage": "individually designed full website",
+  "importRoute": "/#/import",
+  "subject": "Medication list review & export",
+  "color": "#273bc0",
+  "paper": "#f4f5ff",
+  "label": "Notes from the review desk",
+  "article": "how-we-built-medication-review",
+  "headline": "How we built a medication review desk",
+  "summary": "Why DoseFolio separates finding a medication, reading its directions, and marking an entry reviewed.",
+  "topics": [
+    "medication-list",
+    "medication-review",
+    "health-records"
+  ],
+  "sections": [
+    [
+      "Three actions, one readable list",
+      "DoseFolio is organized around find, check and take away. Search narrows an imported medication list. A review mark records which entries the visitor has read in the current session. Export produces a copy for a later conversation. Keeping these actions separate prevents a checkbox from looking like a medication administration record. Checking an entry never means a dose was taken."
+    ],
+    [
+      "The system behind the review",
+      "The frontend is a React application served as static files. Its connection requests go to a separate Node service, which uses FinchNode Hosted Connect and the production API. That server keeps the API key outside the browser and ties a temporary session to this site’s origin. DoseFolio receives the categories authorized for that session rather than a browser credential that could query arbitrary patients."
+    ],
+    [
+      "Directions stay with their source",
+      "The review desk displays supplied medication details rather than generating a dosing schedule. A recorded direction may be incomplete, old or different from a current instruction. The app does not resolve that difference, check interactions or recommend changes. The useful outcome is a list of entries to clarify with a clinician or pharmacist, with the source wording available to support the discussion."
+    ],
+    [
+      "Review state is deliberately temporary",
+      "Review marks belong to the current interface session. They are not sent back to a medical record and should not be treated as an adherence history. An exported review is a separate file under the visitor’s control. Ending the connection removes access here, but does not erase a file already downloaded. This distinction is part of the workflow, not an extra promise about clinical accuracy."
+    ],
+    [
+      "Current integration status",
+      "The code implements the production connection path, while live activation is still pending. An unavailable connection produces a setup message instead of a sample medication list. DoseFolio has its own review-focused interface and public repository, with a clear boundary between the connection adapter and the review desk. The implementation can be inspected in source; deployment alone is not evidence of real patient connectivity."
+    ]
+  ],
+  "reference": [
+    "FinchNode API contract",
+    "https://finchnode.com/openapi.yaml"
+  ]
+}

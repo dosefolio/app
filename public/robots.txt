@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://dosefolio.onrender.com/sitemap.xml
