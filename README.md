@@ -80,3 +80,7 @@ Explore medication-list review, the meaning of source status, and the difference
 - [Medication review flags are different from source status](https://dosefolio.com/guides/review-flags-and-source-status.html) — Understand why DoseFolio keeps “reviewed this session” separate from an imported medication’s active status and recorded directions.
 
 - [Why medication startups need patient data before adding AI](https://dosefolio.com/guides/why-medication-startups-need-patient-data.html) — Explore how authorized medication data can support useful AI features, and why source directions, status and review context matter before model selection.
+
+## Industry guides
+
+- [Best medication reminder apps in 2026, and the ones that shut down](https://dosefolio.com/guides/best-medication-reminder-apps.html) — Apple Health Medications, Medisafe, MyTherapy and CareClinic compared, plus which once-popular pill reminder apps are discontinued and what to check about privacy.
