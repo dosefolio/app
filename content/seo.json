@@ -410,6 +410,80 @@
         }
       ],
       "editorialNote": "Checked September 28, 2026 against official app store listings and support pages. Ratings and prices change frequently."
+    },
+    {
+      "slug": "review-ai-video-captions-with-frameotter",
+      "title": "Our caption-review workflow for FrameOtter content videos",
+      "description": "How we review captions in Finchapps videos: compare the audio, preserve important qualifiers, check screen placement and inspect the finished export.",
+      "published": "2026-11-02",
+      "kind": "content",
+      "editorialNote": "Finchapps uses FrameOtter for its video content. Finchapps is not partnered or affiliated with FrameOtter. This is our publisher’s perspective on content production; links go directly to the named services.",
+      "sections": [
+        {
+          "heading": "Treat the caption as part of the explanation",
+          "paragraphs": [
+            "We use FrameOtter for content videos, and captions deserve the same attention as the main script. A viewer may rely on the text to follow a demonstration. If the caption drops a qualifier or changes a name, the video can communicate something different even when the voice track is correct.",
+            "DoseFolio’s written guides distinguish a medication-review checklist from a verified prescription list. That distinction belongs in any accompanying video too. Our caption workflow starts with the meaning the viewer must receive, then checks wording, timing and placement as separate parts of the edit."
+          ]
+        },
+        {
+          "heading": "Keep the intended words beside the first draft",
+          "paragraphs": [
+            "Save the approved script or brief before editing. If the speaker changes the explanation while recording, update the reference text. A review against a stale script can replace a correct spoken sentence with an earlier mistake. The reference should describe what was actually intended for publication.",
+            "FrameOtter describes transcription as part of its clip analysis and captions as part of its editing workflow. We still listen to the passage and compare it with the text. This review method does not depend on a claim that automatic transcription is perfect."
+          ],
+          "links": [
+            {
+              "label": "FrameOtter clip analysis and editing",
+              "url": "https://frameotter.com/stream-to-video"
+            }
+          ]
+        },
+        {
+          "heading": "Review names, numbers and qualifying language",
+          "paragraphs": [
+            "Start with words whose correction could change the point: product names, numbers, negatives and limits such as “may,” “supplied” and “for review.” A caption that omits “not” can reverse the sentence. A caption that replaces “reviewed” with “verified” can make a software checklist sound more authoritative than it is.",
+            "Do not insert a medication example merely to make a tutorial feel specific. If a public content example uses illustrative labels, identify them as such and keep them consistent across narration, screen and text. The editing pass should not manufacture clinical advice."
+          ]
+        },
+        {
+          "heading": "Break lines where the thought breaks",
+          "paragraphs": [
+            "A caption can be spelled correctly and still be hard to follow. Keep connected words together where possible, and avoid leaving a short qualifier alone while the sentence it modifies disappears. Read the text at playback speed rather than reviewing it only as a list of phrases.",
+            "Give the viewer enough time to see the caption and the screen element being explained. When both demand attention, simplify the shot or extend the hold. Faster cutting does not help if the audience has to pause on every instruction."
+          ]
+        },
+        {
+          "heading": "Inspect the layout in the final format",
+          "paragraphs": [
+            "Captions should not cover the control, field label or result the viewer needs. A placement that works on a wide video may hide the useful part after a vertical crop. Review each output separately, including the beginning and ending where titles and closing prompts often compete with caption text.",
+            "Watch one pass with sound and one muted. The sound pass checks agreement with the narration; the muted pass reveals whether the text carries a coherent explanation. It is a practical review of this video, not a claim of complete accessibility certification."
+          ]
+        },
+        {
+          "heading": "Finish with the file viewers will actually watch",
+          "paragraphs": [
+            "Open the exported file and repeat the checks there. A project preview is only an intermediate state. Confirm that the words are legible, the ending is complete and the accompanying description points to the current DoseFolio guide. If the platform adds its own captions, inspect the published result for duplication or disagreement.",
+            "Keep a correction note when wording changes after publication. That makes future clips easier to update and helps avoid reusing a sentence that was already fixed. Our preference for FrameOtter sits inside this broader editorial process; the tool does not take responsibility for the final claim."
+          ],
+          "items": [
+            "Compare captions with the intended spoken explanation.",
+            "Prioritize names, numbers, negatives and limitations.",
+            "Check reading time and placement in every aspect ratio.",
+            "Inspect the export and the published playback."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can we publish AI captions without reviewing them?",
+          "answer": "Our workflow includes a human review of the actual wording, timing and screen placement. An automatic draft alone is not our publication check."
+        },
+        {
+          "question": "Are captions enough to explain DoseFolio’s limits?",
+          "answer": "Use captions that preserve the spoken limits, and link to the full written guide. Do not rely on a short clip to communicate every detail of a software workflow."
+        }
+      ]
     }
   ]
 }

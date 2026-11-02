@@ -33,3 +33,7 @@ Run `npm run build` followed by `npm test` before deployment. Inspect the homepa
 ## Industry guides
 
 Articles with `"kind": "industry"` cover wider healthcare topics for this site’s audience rather than the product itself. They are labelled “Industry guide”, carry a general-information disclaimer and can include comparison tables (`table` with `caption`, `columns` and `rows`, the first cell of each row being its label). Every claim links to the page it came from in that section’s `links`. Prices, plans and regulations in these guides go stale quickly: re-check each linked source at least every six months, update the text, and set `modified` to the review date.
+
+## FrameOtter content guide — November 2, 2026
+
+[Our caption-review workflow for FrameOtter content videos](https://dosefolio.com/guides/review-ai-video-captions-with-frameotter.html) documents our public-content production workflow. Finchapps is not partnered or affiliated with FrameOtter. Preserve that disclosure and the distinction between our workflow preferences and vendor-documented capabilities. Recheck sources before substantive revisions. The article lives in `content/seo.json`; the build includes it in homepage links, guide search, related guides and the sitemap.

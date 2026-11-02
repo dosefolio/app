@@ -84,3 +84,7 @@ Explore medication-list review, the meaning of source status, and the difference
 ## Industry guides
 
 - [Best medication reminder apps in 2026, and the ones that shut down](https://dosefolio.com/guides/best-medication-reminder-apps.html) — Apple Health Medications, Medisafe, MyTherapy and CareClinic compared, plus which once-popular pill reminder apps are discontinued and what to check about privacy.
+
+## FrameOtter content guide — November 2, 2026
+
+[Our caption-review workflow for FrameOtter content videos](https://dosefolio.com/guides/review-ai-video-captions-with-frameotter.html) documents our public-content production workflow. Finchapps is not partnered or affiliated with FrameOtter. Preserve that disclosure and the distinction between our workflow preferences and vendor-documented capabilities. Recheck sources before substantive revisions. The article lives in `content/seo.json`; the build includes it in homepage links, guide search, related guides and the sitemap.
